@@ -4,12 +4,12 @@
 #include <stdlib.h>
 
 
-void log_msg(FILE *fp, char *message,char* file,int line){
+void log_msg(FILE *fp, const char* message,const char* file,int line){
 		
 	fprintf(fp, "PROGRAM LOG:\n FILE: %s; LINE: %d\n  %s \n",file,line,message);
 }
 
-void readNetwork_t(char* filename, arrayofNeurons &neurons, float* &weights_mtx, int&N, int&M)
+void readNetwork_t(const char* filename, arrayofNeurons &neurons, float* &weights_mtx, int&N, int&M)
 {
 	FILE* fp = fopen(filename, "r");
 	char message[200];
@@ -60,7 +60,7 @@ void readNetwork_t(char* filename, arrayofNeurons &neurons, float* &weights_mtx,
 
 } 
 
-void readNetwork_b(char* filename, arrayofNeurons &neurons, float* &weights_mtx, int &N, int &M)
+void readNetwork_b(const char* filename, arrayofNeurons &neurons, float* &weights_mtx, int &N, int &M)
 {
 
 	FILE* fp = fopen(filename, "rb");
@@ -107,7 +107,7 @@ void readNetwork_b(char* filename, arrayofNeurons &neurons, float* &weights_mtx,
 }
 
 
-void writeNetwork_t(char* filename, arrayofNeurons neurons, float* weights, int N, int M)
+void writeNetwork_t(const char* filename, arrayofNeurons neurons, float* weights, int N, int M)
 {
 	FILE* fp = fopen(filename,"w"); 
 	char message[200];
@@ -153,7 +153,7 @@ void writeNetwork_t(char* filename, arrayofNeurons neurons, float* weights, int 
 }
 
 
-void writeNetwork_b(char* filename, arrayofNeurons neurons, float* weights, int N, int M)
+void writeNetwork_b(const char* filename, arrayofNeurons neurons, float* weights, int N, int M)
 {	
 	// TODO: implement me!
 	int i = 1; 

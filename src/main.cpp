@@ -6,7 +6,7 @@ int main(){
 
 	std::cout<<"hello world\n";
 	arrayofNeurons neurons;
-	char* filename = "tempfile.nn";
+	const char* filename = "tempfile.nn";
 	float* weightsmtx;
 	int N, M; 
 	readNetwork_t(filename,neurons,weightsmtx,N,M);

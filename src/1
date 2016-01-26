@@ -16,26 +16,17 @@ class Neuron {
 		pfunction pf; afunction af;   
 		float astate , thold; 
 		// todo: allow for different output function
-		float net; 
 
-	public:
-		~Neuron();  
+	public: 
 		Neuron(float* line);
 		float* toFloatArray();
 		void print();	
 	
 		// calculates the input to the neuron
-		void propagate(float* weights,float* inputs, int N); 
-
+		void propagate(float* wmtx,float* outs); 
 		// sets the activations state
 		void activate();
-
-		// retrieves the activation state of the neuron, possibly after applying an output function 
 		float output(); 
-	
-		void setThreshold(float thld);
-
-
 
 	
 };

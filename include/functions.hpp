@@ -4,6 +4,8 @@
 #define NUM_PFTS 1
 #define NUM_AFTS 3 
 
+#include <math.h>
+
 float nn_wsum(float* inputs , float* weights, int N);
 
 float nn_tanh(float net,float astate, float thold);
